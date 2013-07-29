@@ -1,18 +1,22 @@
-//
-//  main.cpp
-//  NQL
-//
-//  Created by Damon Swayn on 29/07/13.
-//  Copyright (c) 2013 Damon Swayn. All rights reserved.
-//
-
+#include <string>
 #include <iostream>
+#include <map>
 
-int main(int argc, const char * argv[])
+#include "ast.h"
+#include "Tokenizer.h"
+#include "Parser.h"
+
+std::map<std::string, node*> vars;
+
+int main(int argc, char* argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::string c = "";
+    while(c != "q")
+    {
+        std::getline(std::cin, c);
+        auto v = readAndTokenize(format(c));
+        auto t = buildTree(v);
+        std::cout << eval(t) << std::endl;
+    }
     return 0;
 }
-
