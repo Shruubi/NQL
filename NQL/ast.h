@@ -19,8 +19,7 @@ enum NODE_TYPE {
     ATOM,
     BLOCKSTART,
     BLOCKEND,
-    VAR,
-    FUNC
+    VAR
     };
 
 typedef struct node
