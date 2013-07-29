@@ -42,7 +42,15 @@ std::vector<std::string> buildArgsList(node* n)
     std::vector<std::string> argsList;
     for(int i = 0; i < n->next.size(); i++)
     {
-        argsList.push_back(n->next[i]->val);
+        if(n->next[i]->type == VAR)
+        {
+            node* ptr = vars[n->next[i]->val];
+            argsList.push_back(ptr->val);
+        }
+        else
+        {
+            argsList.push_back(n->next[i]->val);
+        }
     }
     return argsList;
 }
@@ -191,8 +199,14 @@ int print(std::vector<std::string> argsList)
     std::string tmp = "";
     for(int i = 0; i < argsList.size(); i++)
     {
-        std::cout << argsList[i] << std::endl;
+        //strip out the quotation marks
+        if(argsList[i][0] == '"')
+            tmp = argsList[i].substr(1, argsList[i].size() - 2);
+        else
+            tmp = argsList[i];
+        std::cout << tmp;
     }
+    std::cout << std::endl; //start a new line so it doesn't look like we tacked on a 0 to the string.
     return 0;
 }
 
