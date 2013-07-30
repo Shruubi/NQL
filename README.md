@@ -31,7 +31,7 @@ All math operands bar the exponent operator can have a variable amount of argume
  is just as valid as 
 
 ```
-(+ 2 2 2 2 2 2 2 2 2).
+(+ 2 2 2 2 2 2 2 2 2)
 ```
 
 There are also the following boolean operands (&, |, !, <, >, =) which represent logical
