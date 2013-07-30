@@ -1,7 +1,8 @@
 NQL
 ===
 
-Not Quite Lisp, a kinda-sorta Lisp like language.
+Not Quite Lisp, a kinda-sorta-but-not-quite-because-it-is-technically-procedural language that shares
+some syntactical similarities to Lisp.
 
 About
 =====
