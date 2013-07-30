@@ -20,6 +20,7 @@ Quick Tute
 Note: A few definitions, because what makes sense in my head probably doesn't to other people.
 
 Block: A piece of evaluable code. (+ 2 2) is a block
+
 Atom: A literal value. 5 is an atom as you cannot redefine the meaning of a number.
 
 We have the basic math operands (+, -, *, /) as well as modulo (%) and exponent (^).
