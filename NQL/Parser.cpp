@@ -120,18 +120,37 @@ int eval(node* n)
     }
     else if(n->val == "let")
     {
-        vars[n->next[0]->val] = n->next[1];
+        if(n->next[1]->val == "eval")
+        {
+            node* ev = new node;
+            ev->type = ATOM;
+            ev->val = std::to_string(eval(n->next[1]));
+            vars[n->next[0]->val] = ev;
+        }
+        else
+        {
+            vars[n->next[0]->val] = n->next[1];
+        }
     }
     else if(n->val == "eval")
     {
-        std::string key = n->next[0]->val;
-        return eval(vars[key]);
+        if(n->next[0]->type == VAR)
+        {
+            std::string key = n->next[0]->val;
+            return eval(vars[key]);
+        }
+        else
+        {
+            return eval(n->next[0]);
+        }
     }
     else //if we fucked up, then just try to return the identity of the current node
     {
         std::vector<int> identity = buildNumList(n);
         return identity[0];
     }
+    
+    return 0;
 }
 
 int add(std::vector<int> numList)

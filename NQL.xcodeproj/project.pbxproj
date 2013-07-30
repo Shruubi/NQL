@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		E4B935CB17A66E6B0011CE19 /* NQL.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E4B935CA17A66E6B0011CE19 /* NQL.1 */; };
 		E4B935D217A66F320011CE19 /* ast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B935D117A66F320011CE19 /* ast.cpp */; };
-		E4B935D517A66F420011CE19 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B935D417A66F420011CE19 /* main.cpp */; };
 		E4B935D717A66F490011CE19 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B935D617A66F490011CE19 /* Parser.cpp */; };
 		E4B935DA17A66F520011CE19 /* Tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B935D917A66F520011CE19 /* Tokenizer.cpp */; };
+		E4FF265917A766DF00DC07FB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4FF265817A766DF00DC07FB /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,11 +32,11 @@
 		E4B935CA17A66E6B0011CE19 /* NQL.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NQL.1; sourceTree = "<group>"; };
 		E4B935D117A66F320011CE19 /* ast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ast.cpp; sourceTree = "<group>"; };
 		E4B935D317A66F3A0011CE19 /* ast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
-		E4B935D417A66F420011CE19 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E4B935D617A66F490011CE19 /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
 		E4B935D817A66F4E0011CE19 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		E4B935D917A66F520011CE19 /* Tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tokenizer.cpp; sourceTree = "<group>"; };
 		E4B935DB17A66F570011CE19 /* Tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tokenizer.h; sourceTree = "<group>"; };
+		E4FF265817A766DF00DC07FB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +73,10 @@
 				E4B935D917A66F520011CE19 /* Tokenizer.cpp */,
 				E4B935D817A66F4E0011CE19 /* Parser.h */,
 				E4B935D617A66F490011CE19 /* Parser.cpp */,
-				E4B935D417A66F420011CE19 /* main.cpp */,
 				E4B935D317A66F3A0011CE19 /* ast.h */,
 				E4B935D117A66F320011CE19 /* ast.cpp */,
 				E4B935CA17A66E6B0011CE19 /* NQL.1 */,
+				E4FF265817A766DF00DC07FB /* main.cpp */,
 			);
 			path = NQL;
 			sourceTree = "<group>";
@@ -133,9 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B935D217A66F320011CE19 /* ast.cpp in Sources */,
-				E4B935D517A66F420011CE19 /* main.cpp in Sources */,
 				E4B935D717A66F490011CE19 /* Parser.cpp in Sources */,
 				E4B935DA17A66F520011CE19 /* Tokenizer.cpp in Sources */,
+				E4FF265917A766DF00DC07FB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +234,7 @@
 				E4B935D017A66E6B0011CE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

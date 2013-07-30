@@ -2,21 +2,23 @@
 #include <iostream>
 #include <map>
 
-#include "ast.h"
 #include "Tokenizer.h"
+#include "ast.h"
 #include "Parser.h"
 
 std::map<std::string, node*> vars;
 
 int main(int argc, char* argv[])
 {
-    std::string c = "";
-    while(c != "q")
+    std::string code = "";
+    std::getline(std::cin, code);
+    while(code != "(quit)")
     {
-        std::getline(std::cin, c);
-        auto v = readAndTokenize(format(c));
-        auto t = buildTree(v);
-        std::cout << eval(t) << std::endl;
+        std::string formatted_code = format(code);
+        std::vector<std::string> tokens = readAndTokenize(formatted_code);
+        node* ast = buildTree(tokens);
+        std::cout << eval(ast) << std::endl;
+        std::getline(std::cin, code);
     }
     return 0;
 }

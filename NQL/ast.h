@@ -27,7 +27,7 @@ typedef struct node
     NODE_TYPE type;
     std::string val;
     std::vector<node*> next; //there can be more than one argument
-};
+} _node;
 
 bool isAtom(std::string token);
 node* buildTree(std::vector<std::string> tokens);
