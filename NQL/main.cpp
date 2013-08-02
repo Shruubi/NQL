@@ -13,12 +13,15 @@ int main(int argc, char* argv[])
     std::string code = "";
     std::getline(std::cin, code);
     while(code != "(quit)")
-    {
-        std::string formatted_code = format(code);
-        std::vector<std::string> tokens = readAndTokenize(formatted_code);
-        node* ast = buildTree(tokens);
-        std::cout << eval(ast) << std::endl;
-        std::getline(std::cin, code);
+    {   
+        if (code != "")
+        {
+            std::string formatted_code = format(code);
+            std::vector<std::string> tokens = readAndTokenize(formatted_code);
+            node* ast = buildTree(tokens);
+            std::cout << eval(ast) << std::endl;
+            std::getline(std::cin, code);
+        }
     }
     return 0;
 }
