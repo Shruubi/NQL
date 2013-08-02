@@ -30,6 +30,7 @@ typedef struct node
 } _node;
 
 bool isAtom(std::string token);
+bool is_number(const std::string& s);
 node* buildTree(std::vector<std::string> tokens);
 
 #endif

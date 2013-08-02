@@ -13,9 +13,11 @@
 #include <stack>
 #include <math.h>
 #include <iostream>
+#include <sstream>
 #include <map>
 #include "ast.h"
 
+std::string convertInt(int number);
 std::vector<int> buildNumList(node* n);
 std::vector<std::string> buildArgsList(node* n);
 int eval(node* n);

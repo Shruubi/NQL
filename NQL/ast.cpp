@@ -1,10 +1,18 @@
 #include "ast.h"
 #include <algorithm>
 
+bool is_number(const std::string& s)
+{
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
+}
+
 //if a token is surrounded by quotes then we'll treat it as an atom to keep everything working as is
 bool isAtom(std::string token)
 {
-    if(std::all_of(token.begin(), token.end(), ::isdigit))
+    //if(std::all_of(token.begin(), token.end(), ::isdigit))
+    if(is_number(token))
         return true;
     else if(token[0] == '"' && token[token.size() - 1] == '"')
         return true;

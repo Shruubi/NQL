@@ -2,6 +2,13 @@
 
 extern std::map<std::string, node*> vars;
 
+std::string convertInt(int number)
+{
+    std::stringstream ss;//create a stringstream
+    ss << number;//add number to the stream
+    return ss.str();//return a string with the contents of the stream
+}
+
 std::vector<int> buildNumList(node* n)
 {
     std::vector<int> numList;
@@ -124,7 +131,7 @@ int eval(node* n)
         {
             node* ev = new node;
             ev->type = ATOM;
-            ev->val = std::to_string(eval(n->next[1]));
+            ev->val = convertInt(eval(n->next[1]));
             vars[n->next[0]->val] = ev;
         }
         else
