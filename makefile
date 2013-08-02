@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-o NQL
+CFLAGS=-o NQLi
 
 all: ./NQL/main.cpp ./NQL/Tokenizer.cpp ./NQL/ast.cpp ./NQL/Parser.cpp
 	$(CC) $(CFLAGS) ./NQL/main.cpp ./NQL/Tokenizer.cpp ./NQL/ast.cpp ./NQL/Parser.cpp 
