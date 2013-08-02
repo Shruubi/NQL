@@ -139,6 +139,12 @@ int eval(node* n)
             vars[n->next[0]->val] = n->next[1];
         }
     }
+    else if(n->val == "loop")
+    {
+        while(eval(n->next[0]))
+            for(int i = 1; i < n->next.size(); i++)
+                eval(n->next[i]);
+    }
     else if(n->val == "eval")
     {
         if(n->next[0]->type == VAR)
